@@ -93,4 +93,5 @@ def drawSpiral():
 
 if __name__ == '__main__':
     drawSpiral()
+    print('Done!')
     turtle.done()
