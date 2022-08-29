@@ -61,6 +61,7 @@ def drawSpiral():
     my_turtle.pencolor('white')
     my_turtle.fillcolor('white')
     my_turtle.hideturtle()
+    my_turtle.speed('fastest')
 
     if (not show_path):
         my_turtle.penup()
