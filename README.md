@@ -15,3 +15,5 @@ Prime spiral with max value 10,000 without path lines, and dot radius 5
 ![Prime spiral with max value 4000 with path lines, and dot radius 10](./images/spiral3.png)
 
 Prime spiral with max value 4000 with path lines, and dot radius 10
+
+It is a bit slow but that's the nature of `turtle` graphics.

@@ -11,7 +11,7 @@ if (sys.argv.count('-v') != 0):
 # The maximum number in the spiral is (canv_length / step_size)^2
 # That number will be in the top left corner (if it's even) or 
 # bottom right corner (if it's odd)
-canv_length = 300
+canv_length = 900
 step_size = 15
 
 # The radius of the dots drawn on prime numbers
@@ -29,7 +29,7 @@ my_screen.screensize(canv_length, canv_length, '#2d2d2d') # Background is dark m
 # Function that computes primes based on given number
 # Relatively slow/inefficient but should be fine
 # since we don't need performance
-def isPrime(n):
+def is_prime(n):
     if (n == 1 or n == 0): return False
     if (n % 2 == 0): return (n == 2)
     if (n % 3 == 0): return (n == 3)
@@ -44,7 +44,7 @@ def isPrime(n):
         if (n % i == 0): return False
     return True
 
-def drawSpiral():
+def draw_spiral():
     num_steps = 1 # Maximum number of steps to take per side
     num_steps_taken = 0 # Steps taken on a side
     has_turned_left = False
@@ -67,7 +67,7 @@ def drawSpiral():
         my_turtle.penup()
 
     while (current_val <= max_val):
-        current_prime = isPrime(current_val)
+        current_prime = is_prime(current_val)
 
         if (show_output):
             print('{} {}'.format(current_val, 'is prime' if current_prime else 'is not prime'))
@@ -93,6 +93,6 @@ def drawSpiral():
     # my_screen.exitonclick()
 
 if __name__ == '__main__':
-    drawSpiral()
+    draw_spiral()
     print('Done!')
     turtle.done()
